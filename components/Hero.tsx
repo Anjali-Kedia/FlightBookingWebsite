@@ -200,8 +200,9 @@ const FlightSearch = () => {
     
               {/* Swap Icon */}
               <div className="flex items-center">
-                <button className="p-4 bg-gray-100 rounded-full shadow-sm">
+                <button className="p-4 bg-gray-100 rounded-full shadow-sm ">
                   <IoIosSwap className="h-7 w-7 text-gray-700 " />
+                  
                 </button>
               </div>
     

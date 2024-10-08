@@ -64,15 +64,28 @@ const FlightComponent: React.FC<FlightComponentProps> = ({ flights, price, openD
                 </p>
               </div>
             </div>
+            
           ))}
+          
         </div>
-        <div className="flex flex-col justify-end items-start space-y-2 w-full h-full border-l-2 pl-6 ">
-          <p className="text-[#787B80] text-lg">from</p>
-          <p className="text-2xl  text-gray-900">{price}</p>
-          <button className="bg-[#003E39] text-white px-24 py-3 rounded-lg  text-lg hover:bg-[#002f2a] transition">
-            Select
-          </button>
-        </div>
+        <div className="relative flex flex-col justify-end items-start space-y-2 w-full h-full pl-6">
+  {/* Vertical Line */}
+  <div
+    className="absolute left-0 h-[243px] top-0 -mt-6"
+    style={{
+      width: "1px",
+      backgroundColor: "#e6e8eb", // Line color (use tailwind gray-300 equivalent)
+    }}
+  ></div>
+
+  {/* Content */}
+  <p className="text-[#787B80] text-lg">from</p>
+  <p className="text-2xl  text-gray-900">{price}</p>
+  <button className="bg-[#003E39] text-white px-24 py-3 rounded-lg text-lg hover:bg-[#002f2a] transition">
+    Select
+  </button>
+</div>
+
       </div>
     </div>
   );

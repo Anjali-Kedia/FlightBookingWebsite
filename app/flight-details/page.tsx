@@ -181,12 +181,12 @@ const FlightListWithDetails = () => {
     isDetailsOpen ? 'transform translate-x-0' : 'transform translate-x-full'
   }`}
 >
-  <button onClick={closeDetails} className="absolute top-4 left-6 flex items-center">
-    <div className="rounded-full border bg-gray-100 w-8 h-8 flex items-center justify-center">
+  <button onClick={closeDetails} className="absolute top-8 left-6 flex  items-center">
+    <div className="rounded-full  bg-gray-100 w-8 h-8 flex items-center justify-center">
       <FiArrowLeft className="text-lg" /> {/* Arrow inside a circle */}
     </div>
   </button>
-  <div className="p-6 mt-12  bg-white ">
+  <div className="p-6 mt-16  bg-white ">
   <h2 className="text-2xl mb-4 border-b-2 pb-7">Flight details</h2>
 
   {/* First Flight */}
@@ -205,7 +205,7 @@ const FlightListWithDetails = () => {
 
     {/* Airline Logo and Details */}
     <div className="flex items-center space-x-2">
-      <Image src={lufthansaLogo} width={40} height={40} alt="airline logo" className="border p-1 rounded-sm mr-2" />
+      <Image src={lufthansaLogo} width={40} height={40} alt="airline logo" className="border p-1 rounded-sm mr-2 mb-2" />
       <div>
         <p className="text-sm text-gray-500">Saudi Arabian Airlines • SV553</p>
         <p className="text-sm text-gray-500">Economy • A330</p>
@@ -244,7 +244,7 @@ const FlightListWithDetails = () => {
   <div className="relative flex items-start mb-2">
     {/* Circle and Vertical Line */}
     <div className="mr-4 flex flex-col items-center">
-      <div className="w-4 h-4 border-2 border-black rounded-full mb-2"></div>
+      <div className="w-4 h-4 border-2 border-black rounded-full mb-3"></div>
       <div className="border-l-2 border-black h-12"></div>
     </div>
 
@@ -256,7 +256,7 @@ const FlightListWithDetails = () => {
 
     {/* Airline Logo and Details */}
     <div className="flex items-center space-x-2">
-      <Image src={lufthansaLogo} width={40} height={40} alt="airline logo" className="border p-1 rounded-sm mr-2" />
+      <Image src={lufthansaLogo} width={40} height={40} alt="airline logo" className="border p-1 rounded-sm mr-2 mb-3" />
       <div>
         <p className="text-sm text-gray-500">Saudi Arabian Airlines • SV553</p>
         <p className="text-sm text-gray-500">Economy • A330</p>
