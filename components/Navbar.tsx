@@ -2,7 +2,7 @@
 import { CiSearch } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import { useRouter } from "next/navigation";
-import { useState } from "react"; // Import useState for managing panel visibility
+import { useState } from "react"; 
 import FlightSearch from "./Hero";
 
 const FlightNavBar = () => {

@@ -1,77 +1,3 @@
-// import { CiCalendar, CiSearch } from "react-icons/ci";
-// import { IoIosSwap } from "react-icons/io";
-// import { BiTargetLock } from "react-icons/bi";
-// import { Button } from "@/components/ui/button"; 
-// import { Input } from "@/components/ui/input";  
-// import { GoChevronDown } from "react-icons/go"; 
-
-// const FlightSearch = () => {
-//   return (
-//     <div className="flex flex-col items-center min-h-screen  font-montreal pt-24">
-//       {/* Greeting Section Outside the Box */}
-//       <div className="mb-8 text-center">
-//         <h1 className="text-[42px]  text-gray-800">Good afternoon, Brian</h1>
-//       </div>
-
-//       {/* Flight Search Form Box */}
-//       <div className="bg-white shadow-sm rounded-lg p-10 w-full max-w-6xl border border-gray-200">
-//         {/* Tabs */}
-//         <div className="flex justify-start mb-6">
-//           <button className="py-2 px-8 bg-gray-100 text-gray-700 text-xl font-medium rounded-md focus:outline-none focus:ring">
-//             Flights
-//           </button>
-//         </div>
-
-//         {/* Flight Search Form */}
-//         <div className="flex items-center justify-between space-x-6">
-//           {/* "Where From?" Field */}
-//           <div className="relative w-full flex items-center">
-//             <BiTargetLock className="absolute left-4 h-6 w-6 text-gray-500" />
-//             <Input placeholder="Where from?" className="w-full pl-12 text-lg py-8" />
-//             <GoChevronDown className="absolute right-4 h-6 w-6 text-gray-500"/>
-//           </div>
-
-//           {/* Swap Icon */}
-//           <div className="flex items-center">
-//             <button className="p-4 bg-gray-100 rounded-full shadow-sm">
-//               <IoIosSwap className="h-6 w-6 text-gray-500" />
-//             </button>
-//           </div>
-
-//           {/* "Where To?" Field */}
-//           <div className="relative w-full flex items-center">
-//             <BiTargetLock className="absolute left-4 h-6 w-6 text-gray-500" />
-//             <Input placeholder="Where to?" className="w-full pl-12 text-lg py-8" />
-//             <GoChevronDown className="absolute right-4 h-6 w-6 text-gray-500"/>
-//           </div>
-
-//           {/* Departure Field */}
-//           <div className="relative w-full flex items-center">
-//             <CiCalendar className="absolute left-4 h-6 w-6 text-gray-500" />
-//             <Input placeholder="Departure" className="w-full pl-12 text-lg py-8" />
-//           </div>
-
-//           {/* Return Field */}
-//           <div className="relative w-full flex items-center">
-//             <CiCalendar className="absolute left-4 h-6 w-6 text-gray-500" />
-//             <Input placeholder="Return" className="w-full pl-12 text-lg py-8" />
-//           </div>
-//         </div>
-
-//         {/* Search Button with Icon */}
-//         <div className="mt-8 flex justify-end">
-//           <Button className="bg-[#003E39] hover:bg-green-700 text-white py-7 px-12 rounded-md flex items-center space-x-3 text-xl">
-//             <CiSearch className="h-6 w-6" />
-//             <span>Search flights</span>
-//           </Button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default FlightSearch;
-
 "use client"
 import { useState } from "react";
 import { useRouter } from "next/navigation"; 
@@ -81,7 +7,7 @@ import { BiTargetLock } from "react-icons/bi";
 import { Button } from "@/components/ui/button"; 
 import { Input } from "@/components/ui/input";  
 import { GoChevronDown ,GoChevronUp} from "react-icons/go"; 
-import airportData from '@/data/airports.json'; // Assuming the JSON file is in the 'data' folder
+import airportData from '@/data/airports.json';
 
 const FlightSearch = () => {
   const [fromInput, setFromInput] = useState("");
@@ -93,7 +19,6 @@ const FlightSearch = () => {
 
   const router = useRouter(); 
 
-  // Handle the input change and filter airports for "Where From"
   const handleFromInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value;
     setFromInput(input);
@@ -111,7 +36,7 @@ const FlightSearch = () => {
     }
   };
 
-  // Handle the input change and filter airports for "Where To"
+
   const handleToInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value;
     setToInput(input);

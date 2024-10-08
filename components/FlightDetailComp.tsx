@@ -74,7 +74,7 @@ const FlightComponent: React.FC<FlightComponentProps> = ({ flights, price, openD
     className="absolute left-0 h-[243px] top-0 -mt-6"
     style={{
       width: "1px",
-      backgroundColor: "#e6e8eb", // Line color (use tailwind gray-300 equivalent)
+      backgroundColor: "#e6e8eb", 
     }}
   ></div>
 

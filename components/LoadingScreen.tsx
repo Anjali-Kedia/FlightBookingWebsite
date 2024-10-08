@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"; // Import useRouter for navigation
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { RiLoader5Line } from "react-icons/ri";
 import Image from "next/image";
-import bg_img from "../public/Bg_loading.png"; // Adjust the path if needed
+import bg_img from "../public/Bg_loading.png"; 
 
 const LoadingScreen = () => {
   const [step, setStep] = useState(1);
