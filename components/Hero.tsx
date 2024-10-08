@@ -265,7 +265,7 @@ const FlightSearch = () => {
     
             {/* Search Button with Icon */}
             <div className="mt-8 flex justify-end">
-              <Button onClick={handleSearchFlights} className="bg-[#003E39] hover:bg-green-700 text-white py-7 px-12 rounded-md flex items-center space-x-3 text-xl">
+              <Button onClick={handleSearchFlights} className="bg-[#003E39] hover:bg-green-900 text-white py-7 px-12 rounded-md flex items-center space-x-3 text-xl">
                 <CiSearch className="h-6 w-6" />
                 <span>Search flights</span>
               </Button>
