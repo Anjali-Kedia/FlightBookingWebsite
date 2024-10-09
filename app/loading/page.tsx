@@ -4,7 +4,7 @@ import FlightNavbar from "@/components/Navbar";
 export default function LoadingPage() {
     return (
         <div>
-    <FlightNavbar/>
+    <FlightNavbar />
     <Loader/>
     <LoadingScreen/>
       </div>

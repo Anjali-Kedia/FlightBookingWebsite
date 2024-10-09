@@ -1,6 +1,8 @@
+'use client'
 import FlightSearch from "@/components/Hero";
-
+import { useState } from "react";
 export default function Home() {
+
   return (
     <div className="relative flex flex-col items-center min-h-screen font-montreal pt-24">
       {/* Dashed Lines */}
@@ -50,7 +52,9 @@ export default function Home() {
             Flights
           </button>
         </div>
-        <FlightSearch />
+        <FlightSearch
+          
+        />
       </div>
     </div>
   );

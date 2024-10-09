@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { CiCalendar, CiSearch } from 'react-icons/ci';
 import { IoIosSwap } from 'react-icons/io';
@@ -24,6 +24,32 @@ const FlightSearch = () => {
   const [returnDate, setReturnDate] = useState<Date | null>(null);
 
   const router = useRouter();
+
+  // Load saved data from localStorage when component mounts
+  useEffect(() => {
+    const savedDetails = localStorage.getItem('flightSearch');
+    if (savedDetails) {
+      const parsedDetails = JSON.parse(savedDetails);
+      setFromInput(parsedDetails.from || '');
+      setToInput(parsedDetails.to || '');
+      setDepartureDate(parsedDetails.departureDate ? new Date(parsedDetails.departureDate) : null);
+      setReturnDate(parsedDetails.returnDate ? new Date(parsedDetails.returnDate) : null);
+    }
+  }, []);
+
+  // Store data in localStorage whenever inputs are changed
+  const updateLocalStorage = () => {
+    localStorage.setItem('flightSearch', JSON.stringify({
+      from: fromInput,
+      to: toInput,
+      departureDate: departureDate ? departureDate.toISOString() : null,
+      returnDate: returnDate ? returnDate.toISOString() : null,
+    }));
+  };
+
+  useEffect(() => {
+    updateLocalStorage();
+  }, [fromInput, toInput, departureDate, returnDate]);
 
   const handleFromInputClick = () => {
     setFilteredFromAirports(airportData.airports);

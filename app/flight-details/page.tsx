@@ -11,66 +11,7 @@ const FlightListWithDetails = () => {
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
   // Mock flight data
-  const flightData = [
-    {
-      date: 'Thu 25 Jun',
-      logo: emiratesLogo, // This will work now as StaticImageData
-      airline: 'Emirates',
-      flightNumber: 'AT 4334',
-      departureTime: '9:45 AM',
-      arrivalTime: '11:45 AM',
-      route: 'CDG - DXB',
-      duration: '7h 10min',
-      stops: 1,
-      layover: ''
-    },
-    {
-      date: 'Sat 2 Jul',
-      logo: lufthansaLogo, // StaticImageData
-      airline: 'Emirates',
-      flightNumber: 'AT 4334',
-      departureTime: '11:45 PM',
-      arrivalTime: '6:45 AM',
-      arrivalDay: '+1 day',
-      route: 'CDG - DXB',
-      duration: '19h 10min',
-      stops: 1,
-      layover: 'Lisbon'
-    },
-  ];
-
-  const flightData2 = [
-    {
-      date: 'Thu 25 Jun',
-      logo: emiratesLogo,  // Replace with actual path or link
-      airline: 'Emirates',
-      flightNumber: 'AT 4334',
-      departureTime: '9:45 AM',
-      arrivalTime: '11:45 AM',
-      route: 'CDG - DXB',
-      duration: '2h 10min',
-      stops: 0,  // No stops
-      layover: '',  // No layover
-      arrivalDay: ''  // No additional arrival day
-    },
-    {
-      date: 'Thu 25 Jun',
-      logo: lufthansaLogo,  // Replace with actual path or link
-      airline: 'Lufthansa',
-      flightNumber: 'AT 4334',
-      departureTime: '11:45 PM',
-      arrivalTime: '6:45 AM',
-      route: 'DXB - CDG',
-      duration: '4h 10min',
-      stops: 2,  // 2 stops
-      layover: '6h 32m in Lisbon, P...',  // Layover details
-      arrivalDay: '+1 day'  // Arrival on the next day
-    }
-  ];
   
-  const price2 = 'AED 2,456.90';
-  const price = 'AED 1,456.90';
-
   const openDetails = () => {
     setIsDetailsOpen(true);
   };
@@ -82,7 +23,7 @@ const FlightListWithDetails = () => {
   return (
     <div className="relative">
        <div className={`${isDetailsOpen ? 'opacity-50' : 'opacity-100'} transition-opacity duration-500`}>
-    <FlightNavBar/>
+    <FlightNavBar />
   </div>
       <div className="mt-44"> {/* Add margin top here to push content below navbar */}
         <div className="mb-6 space-y-4 w-full max-w-7xl mx-auto">
@@ -216,3 +157,62 @@ const FlightListWithDetails = () => {
 };
 
 export default FlightListWithDetails;
+const flightData = [
+    {
+      date: 'Thu 25 Jun',
+      logo: emiratesLogo, // This will work now as StaticImageData
+      airline: 'Emirates',
+      flightNumber: 'AT 4334',
+      departureTime: '9:45 AM',
+      arrivalTime: '11:45 AM',
+      route: 'CDG - DXB',
+      duration: '7h 10min',
+      stops: 1,
+      layover: ''
+    },
+    {
+      date: 'Sat 2 Jul',
+      logo: lufthansaLogo, // StaticImageData
+      airline: 'Emirates',
+      flightNumber: 'AT 4334',
+      departureTime: '11:45 PM',
+      arrivalTime: '6:45 AM',
+      arrivalDay: '+1 day',
+      route: 'CDG - DXB',
+      duration: '19h 10min',
+      stops: 1,
+      layover: 'Lisbon'
+    },
+  ];
+
+  const flightData2 = [
+    {
+      date: 'Thu 25 Jun',
+      logo: emiratesLogo,  // Replace with actual path or link
+      airline: 'Emirates',
+      flightNumber: 'AT 4334',
+      departureTime: '9:45 AM',
+      arrivalTime: '11:45 AM',
+      route: 'CDG - DXB',
+      duration: '2h 10min',
+      stops: 0,  // No stops
+      layover: '',  // No layover
+      arrivalDay: ''  // No additional arrival day
+    },
+    {
+      date: 'Thu 25 Jun',
+      logo: lufthansaLogo,  // Replace with actual path or link
+      airline: 'Lufthansa',
+      flightNumber: 'AT 4334',
+      departureTime: '11:45 PM',
+      arrivalTime: '6:45 AM',
+      route: 'DXB - CDG',
+      duration: '4h 10min',
+      stops: 2,  // 2 stops
+      layover: '6h 32m in Lisbon, P...',  // Layover details
+      arrivalDay: '+1 day'  // Arrival on the next day
+    }
+  ];
+  
+  const price2 = 'AED 2,456.90';
+  const price = 'AED 1,456.90';
